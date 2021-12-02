@@ -1,9 +1,11 @@
-const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, 'input.txt');
 
-const fileContent = fs.readFileSync(filePath, 'utf8');
-const data = fileContent.split("\n").map( m => +m );
+const { getFileContents } = require('../shared');
+
+const data = getFileContents(filePath)
+	.split("\n")
+	.map( m => +m );
 
 function getMeasurementIncreases( measurements ) {
 	let count = 0;
