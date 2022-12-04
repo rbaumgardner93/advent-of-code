@@ -1,4 +1,3 @@
-import math
 input = open("input.txt", "r")
 data = input.read()
 rucksacks = data.splitlines()
