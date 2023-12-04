@@ -30,7 +30,6 @@ def part2(data):
         .replace("eight", "eight8eight")
         .replace("nine", "nine9nine")
     )
-    print(data)
     return calibration(data)
 
 
