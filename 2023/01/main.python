@@ -3,23 +3,20 @@ import re
 with open("practice-input.txt") as f:
     data = f.read().strip()
 
-
 def calibration(data):
     res = []
     nums = []
     lines = data.split("\n")
     for line in lines:
-        nums.append(re.findall("\d", line))
+        nums.append(re.findall(r"\d", line))
 
     for num in nums:
         res.append((int(num[0] + num[-1])))
 
     return sum(res)
 
-
 def part1(data):
     return calibration(data)
-
 
 def part2(data):
     data = (
@@ -38,3 +35,4 @@ def part2(data):
 
 # print("Part 1: {}".format(part1(data)))
 print("Part 2: {}".format(part2(data)))
+
